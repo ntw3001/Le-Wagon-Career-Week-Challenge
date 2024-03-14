@@ -1,0 +1,14 @@
+<h2>Welcome to the maps puzzle</h2>
+<%= form_with url: museums_index_path, method: :get do |f| %>
+  <div>
+    <%# searchbar entry %>
+    <%= f.text_field :latitude,
+          class: "form-control search-input",
+          placeholder: "Enter latitude" %>
+    <%= f.text_field :longitude,
+          class: "form-control search-input",
+          placeholder: "Enter longitude" %>
+    <%# submit %>
+    <%= submit_tag "Search", name: "", class: "btn btn-primary search-button" %>
+  </div>
+<% end %>
